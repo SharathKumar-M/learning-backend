@@ -2,10 +2,10 @@ import {User} from "../models/user.model.js";
 
 const registerUser = async (req, res) => {
     try {
-        const {userName, email, password} = req.body;
+        const {username, email, password} = req.body;
 
         // basic validation
-        if ( !userName || !email || !password) {
+        if ( !username || !email || !password) {
             return res.status(400).json({message: 'Please fill all the fields'})
         }
 
@@ -17,15 +17,15 @@ const registerUser = async (req, res) => {
 
         //create user
         const user = await User.create({
-            userName,
+            username,
             email: email.toLowerCase(),
             password,
         });
 
         res.status(201).json({
-            mesasge: 'User registered successfully',
+            message: 'User registered successfully',
             user: {
-                id: user._id, email: user.email, userName: user.userName 
+                id: user._id, email: user.email, username: user.username 
             }
         });
 

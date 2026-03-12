@@ -9,6 +9,6 @@ app.use(express.json());
 
 app.use("/api/v1/users",userRouter);
 
-//example route: http://localhost:5000/api/v1/users/register
+//example route: http://localhost:4000/api/v1/users/register
 
 export default app;

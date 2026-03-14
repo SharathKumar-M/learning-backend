@@ -1,4 +1,4 @@
-import mongoose, {Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 const postSchema = Schema(
     {
@@ -7,6 +7,7 @@ const postSchema = Schema(
             required:true,
             trim:true
         },
+        
         description:{
             type:String,
             required:true,
